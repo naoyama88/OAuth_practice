@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OAuthPractice</title>
+    <meta name="google-signin-client_id" content="744855478316-i0aql2lhmuh69ero62lku82j1qt8kbnm.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="./index.js"></script>
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .g-signin2 {
+            /* margin-left: 500px;
+            margin-top: 200px; */
+            transform: scale(2);
+        }
+
+        .data {
+            height: 200px;
+            width: 200px;
+            display: none;
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div class="data">
+            <p>Profile Details</p>
+            <img id="pic" class="img-circle">
+            <p>Email Address</p>
+            <p id="email" class="alert alert-danger"></p>
+            <button onclick="signOut()" class="btn btn-danger">SignOut</button>
+        </div>
+    </div>
+</body>
+</html>
